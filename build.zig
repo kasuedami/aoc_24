@@ -6,9 +6,10 @@ pub fn build(b: *std.Build) void {
 
     const Days = enum {
         day1,
+        day2,
     };
 
-    const day_option = b.option(Days, "day", "day to run") orelse .day1;
+    const day_option = b.option(Days, "day", "day to run") orelse .day2;
     const day_step = b.step("day", "Run day");
     const day = b.addExecutable(.{
         .name = "day",
