@@ -2,7 +2,7 @@ const std = @import("std");
 const ArrayList = std.ArrayList;
 const allocator = std.heap.page_allocator;
 
-const input_path = "inputs/day0.txt";
+const input_path = "inputs/day1.txt";
 const Input = struct {
     left: []i32,
     right: []i32,
