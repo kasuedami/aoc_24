@@ -7,13 +7,14 @@ pub fn build(b: *std.Build) void {
     const Days = enum {
         day1,
         day2,
+        day3,
     };
 
-    const day_option = b.option(Days, "day", "day to run") orelse .day2;
+    const day_option = b.option(Days, "day", "day to run") orelse .day3;
     const day_step = b.step("day", "Run day");
     const day = b.addExecutable(.{
         .name = "day",
-        .root_source_file = b.path(b.fmt("days/{s}.zig", .{@tagName(day_option)})),
+        .root_source_file = b.path(b.fmt("src/days/{s}.zig", .{@tagName(day_option)})),
         .target = target,
         .optimize = optimize,
     });
