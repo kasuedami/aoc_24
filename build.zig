@@ -11,9 +11,10 @@ pub fn build(b: *std.Build) void {
         day4,
         day5,
         day6,
+        day7,
     };
 
-    const day_option = b.option(Days, "day", "day to run") orelse .day6;
+    const day_option = b.option(Days, "day", "day to run") orelse .day7;
     const day_step = b.step("day", "Run day");
     const day = b.addExecutable(.{
         .name = "day",
